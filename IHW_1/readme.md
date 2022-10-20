@@ -56,14 +56,13 @@
 
   *пример условия `if`:*
   ```
-    cmp	edx, eax						# compare(B[j - 1], B[j])
+    cmp	edx, eax						    # compare(B[j - 1], B[j])
 
-    jle	.if_not					        # if (B[j - 1] <= B[j]) : переход в if_not
-
-        mov r15d, edx                       # temp = B[j - 1]
+    jle	.if_not					            # if (B[j - 1] <= B[j]) : переход в if_not
+        mov r15d, edx                         # temp = B[j - 1]
         mov	r10d, r14d			            # r10d = j
 	    lea	ecx, -1[r10]					# ecx = [j - 1]
-        movsx	r11, ecx					# r11 = [j - 1]
+        movsx r11, ecx					    # r11 = [j - 1]
 	    lea	rcx, 0[0+r11*4]					# rcx = [(j - 1) * 4]
 	    lea	r11, B[rip]						# r11 = указатель наначало массива B
 	    mov	DWORD PTR [rcx+r11], eax		# B[j - 1] = B[j]
