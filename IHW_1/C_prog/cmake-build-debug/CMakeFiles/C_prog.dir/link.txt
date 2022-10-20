@@ -1,0 +1,1 @@
+/usr/bin/cc -g   CMakeFiles/C_prog.dir/main.c.o CMakeFiles/C_prog.dir/insertion.c.o  -o C_prog 

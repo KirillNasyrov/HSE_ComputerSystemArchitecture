@@ -1,0 +1,3 @@
+/mnt/c/HSE/2_course/ComputerSystemArchitecture/HW_1/C_prog/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/HSE/2_course/ComputerSystemArchitecture/HW_1/C_prog/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/c/HSE/2_course/ComputerSystemArchitecture/HW_1/C_prog/cmake-build-debug/CMakeFiles/C_prog.dir
