@@ -1,9 +1,3 @@
-# DWORD PTR -36[rbp] -> r12d
-# QWORD PTR -48[rbp] -> r13
-# DWORD PTR -8[rbp] -> ebx
-# QWORD PTR -16[rbp] -> r14
-# DWORD PTR -4[rbp] -> r10d
-# QWORD PTR -24[rbp] -> r15
     .intel_syntax noprefix
     .text
     .comm	A,4194304,32
