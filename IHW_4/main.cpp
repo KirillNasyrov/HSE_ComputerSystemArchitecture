@@ -124,7 +124,7 @@ int main(int argc, char *argv[]) {
         std::cout << argv[1] << "\n";
         return 2;
     }
-    if (height < 5 || height > 40) { // ограничение на размеры поля в длину и ширину 40
+    if (height < 5 || height > 40) { // ограничение на размеры поля в длину и ширину (от 5 до 40)
         height = height < 5 ? 5 : 40;
     }
     if (length < 5 || length > 40) {
