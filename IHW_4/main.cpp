@@ -35,22 +35,22 @@ void *func1(void *arg) {
             }
         }
         usleep(500000);
-        if (directionLeftToRight) { // переход садовника на следующую клетку
-            if (arr[1] == length - 1) {
-                ++arr[0];
-                directionLeftToRight = false;
+        if (directionLeftToRight) { // если двидется слева направо
+            if (arr[1] == length - 1) { // если достиг края поля
+                ++arr[0]; // увеличиваем координату X на 1
+                directionLeftToRight = false; // задаём движения справа налево
             } else {
-                ++arr[1];
+                ++arr[1]; // увеличиваем координату Y на 1
             }
         } else {
-            if (arr[1] == 0) {
-                ++arr[0];
-                directionLeftToRight = true;
+            if (arr[1] == 0) { // если достиг края поля
+                ++arr[0]; // увеличиваем координату X на 1
+                directionLeftToRight = true; // задаём движения слева направо
             } else {
-                --arr[1];
+                --arr[1]; // уменьшаем координату Y на 1
             }
         }
-        ++count;
+        ++count; // увеличиваем счётчик пройденных клеток
     }
     return nullptr;
 }
@@ -118,17 +118,17 @@ int main(int argc, char *argv[]) {
         length = std::stoi(argv[3]);
     } else if (strcmp(argv[1], "-r") == 0) { // если пользователь выбрал генерацию данных
         srand(time(nullptr));
-        height = 10 + (int)random() % 31; // генерация длины и ширины от 10 до 40
+        height = 5 + (int)random() % 36; // генерация длины и ширины от 5 до 40
         length = (int)random() % 40;
     } else {
         std::cout << argv[1] << "\n";
         return 2;
     }
-    if (height > 40) { // ограничение на размеры поля в длину и ширину 40
-        height = 10;
+    if (height < 5 || height > 40) { // ограничение на размеры поля в длину и ширину 40
+        height = height < 5 ? 5 : 40;
     }
-    if (length > 40) {
-        length = 10;
+    if (length < 5 || length > 40) {
+        length = length < 5 ? 5 : 40;
     }
 
     field = new int*[height]; // создание поля
